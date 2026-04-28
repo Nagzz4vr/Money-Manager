@@ -1,0 +1,11 @@
+<resources>
+    <color name="bg_primary">#151318</color>
+    <color name="bg_surface">#222324</color>
+    <color name="accent_primary">#7F35FF</color>
+    <color name="positive">#00E676</color>
+
+    <color name="text_90">#E6FFFFFF</color>
+    <color name="text_60">#99FFFFFF</color>
+    <color name="text_40">#66FFFFFF</color>
+    <color name="text_20">#33FFFFFF</color>
+</resources>

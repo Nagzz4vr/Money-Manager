@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    app:startDestination="@id/mainFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.nagz.money_manager.ui.MainFragment">
+
+        <action
+            android:id="@+id/action_main_to_income"
+            app:destination="@id/incomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_main_to_calendar"
+            app:destination="@id/calendarFragment" />
+
+        <action
+            android:id="@+id/action_main_to_expense"
+            app:destination="@id/expenseFragment" />
+
+        <action
+            android:id="@+id/action_main_to_ai"
+            app:destination="@id/aiFragment" />
+
+        <action
+            android:id="@+id/action_main_to_transaction"
+            app:destination="@id/TransactionFragment" />
+
+        <action
+            android:id="@+id/action_main_to_settings"
+            app:destination="@id/SettingsFragment"
+        />
+        <action
+            android:id="@+id/action_main_to_modify"
+            app:destination="@id/ModifyFragment"/>
+
+        <action
+            android:id="@+id/action_main_to_modify_categories"
+            app:destination="@id/AddCategories"
+            />
+
+        <action
+            android:id="@+id/action_main_to_delete_categories"
+            app:destination="@id/DeleteCategories"
+            />
+
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.nagz.money_manager.ui.ExpenseFragment">
+    <action
+        android:id="@+id/action_expense_to_income"
+        app:destination="@id/incomeFragment"
+        app:popUpTo="@id/expenseFragment"
+        app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.nagz.money_manager.ui.IncomeFragment">
+        <action
+            android:id="@+id/action_income_to_expense"
+            app:destination="@id/expenseFragment"
+            app:popUpTo="@id/incomeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ModifyFragment"
+        android:name="com.nagz.money_manager.ui.ModifyFragment">
+    <argument
+        android:name="TRANSACTION_ID"
+        app:argType="string"
+        app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddCategories"
+        android:name="com.nagz.money_manager.ui.AddCategoriesFragment"/>
+
+    <fragment
+        android:id="@+id/DeleteCategories"
+        android:name="com.nagz.money_manager.ui.DeleteCategoriesFragment"/>
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.nagz.money_manager.ui.CalendarFragment" />
+
+    <fragment
+        android:id="@+id/aiFragment"
+        android:name="com.nagz.money_manager.ui.AiFragment" />
+
+    <fragment
+        android:id="@+id/TransactionFragment"
+        android:name="com.nagz.money_manager.ui.AddTransactionFragment" />
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.nagz.money_manager.ui.SettingsFragment" />
+
+
+
+
+</navigation>
+

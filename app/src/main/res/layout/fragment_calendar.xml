@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151318"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp"
+        android:text="Calendar"
+        android:textColor="#E6FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:dateTextAppearance="@style/WhiteDateText"
+        android:weekDayTextAppearance="@style/MutedWeekText" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#222324"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Income" android:textColor="#99FFFFFF" android:textSize="10sp"/>
+                <TextView android:id="@+id/tv_Income" android:layout_width="wrap_content" android:layout_height="20dp" android:text="₹ 0" android:textColor="#7F35FF" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expense" android:textColor="#99FFFFFF" android:textSize="10sp"/>
+                <TextView android:id="@+id/tv_Expense" android:layout_width="wrap_content" android:layout_height="20dp" android:text="₹ 450" android:textColor="#7F35FF" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Net" android:textColor="#99FFFFFF" android:textSize="10sp"/>
+                <TextView android:id="@+id/tv_Net" android:layout_width="wrap_content" android:layout_height="20dp" android:text="-₹ 450" android:textColor="#E6FFFFFF" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp" />
+</LinearLayout>

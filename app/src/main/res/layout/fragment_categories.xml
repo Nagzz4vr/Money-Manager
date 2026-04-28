@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#151318">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/spinnerCategories"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_60"
+                    android:popupBackground="#222324"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Category"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginBottom="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category Name"
+                android:textColorHint="#99FFFFFF"
+                app:boxBackgroundColor="#222324"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxStrokeColor="#7F35FF"
+                app:hintTextColor="#7F35FF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Theme Color"
+                android:textColor="#99FFFFFF"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvColors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Icon"
+                android:textColor="#99FFFFFF"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveCategory"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="40dp"
+                android:text="Create Category"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:cornerRadius="18dp"
+                android:backgroundTint="#7F35FF" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
