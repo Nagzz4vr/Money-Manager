@@ -27,8 +27,7 @@ A personal finance tracking app for Android. Log daily transactions, categorize 
 
 | Calendar View                                                                                            | Income Analysis                                                                                          | Settings                                                                                                 |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/user-attachments/assets/48071a05-8797-4db0-8e37-8d82330b282a" width="250"/> | <img src="https://github.com/user-attachments/assets/b69a7dc6-ca45-4b7c-94fd-78f408d79b95" width="250"/> |<img width="250" alt="settings" src="https://github.com/user-attachments/assets/91b190a9-ed39-44ac-81e9-000071b049f7" />
- |
+| <img src="https://github.com/user-attachments/assets/48071a05-8797-4db0-8e37-8d82330b282a" width="250"/> | <img src="https://github.com/user-attachments/assets/b69a7dc6-ca45-4b7c-94fd-78f408d79b95" width="250"/> |<img width="250" alt="settings" src="https://github.com/user-attachments/assets/91b190a9-ed39-44ac-81e9-000071b049f7" />|
 
 ---
 
